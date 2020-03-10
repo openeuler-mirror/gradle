@@ -1,0 +1,25 @@
+From b92f935f615f9a92b4e636a1635031f7a2c74068 Mon Sep 17 00:00:00 2001
+From: Mikolaj Izdebski <mizdebsk@redhat.com>
+Date: Fri, 12 Jun 2015 12:04:53 +0200
+Subject: [PATCH 07/18] Port to Kryo 3.0
+
+---
+ .../org/gradle/internal/serialize/kryo/KryoBackedEncoder.java   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/subprojects/messaging/src/main/java/org/gradle/internal/serialize/kryo/KryoBackedEncoder.java b/subprojects/messaging/src/main/java/org/gradle/internal/serialize/kryo/KryoBackedEncoder.java
+index c63e4340069..9f93df4ab8a 100644
+--- a/subprojects/messaging/src/main/java/org/gradle/internal/serialize/kryo/KryoBackedEncoder.java
++++ b/subprojects/messaging/src/main/java/org/gradle/internal/serialize/kryo/KryoBackedEncoder.java
+@@ -78,7 +78,7 @@ public class KryoBackedEncoder extends AbstractEncoder implements FlushableEncod
+      * Returns the total number of bytes written by this encoder, some of which may still be buffered.
+      */
+     public int getWritePosition() {
+-        return output.total();
++        return (int)output.total();
+     }
+ 
+     public void flush() {
+-- 
+2.20.1
+

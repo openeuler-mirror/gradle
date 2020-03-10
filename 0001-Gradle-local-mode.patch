@@ -1,0 +1,77 @@
+From dbdd81c3c8cfa1b3c61bc2376a42702be2a3f476 Mon Sep 17 00:00:00 2001
+From: Mikolaj Izdebski <mizdebsk@redhat.com>
+Date: Wed, 15 Oct 2014 14:23:30 +0200
+Subject: [PATCH 01/18] Gradle local mode
+
+---
+ build.gradle                                         | 1 +
+ buildSrc/build.gradle                                | 3 +++
+ subprojects/docs/docs.gradle                         | 1 +
+ subprojects/docs/src/transforms/release-notes.gradle | 1 +
+ subprojects/reporting/reporting.gradle               | 1 +
+ 5 files changed, 7 insertions(+)
+
+diff --git a/build.gradle b/build.gradle
+index 45faed9098b..b4504db8f7c 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -193,6 +193,7 @@ allprojects {
+         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+         maven { url 'https://repo.gradle.org/gradle/libs-milestones' }
+         maven { url "https://repo.gradle.org/gradle/libs-snapshots" }
++        xmvn()
+     }
+ 
+     // patchExternalModules lives in the root project - we need to activate normalization there, too.
+diff --git a/buildSrc/build.gradle b/buildSrc/build.gradle
+index b2eb858a3ce..e5b73f35ef5 100644
+--- a/buildSrc/build.gradle
++++ b/buildSrc/build.gradle
+@@ -25,6 +25,9 @@ repositories {
+     maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+     maven { url "https://repo.gradle.org/gradle/libs-snapshots" }
+     maven { url "https://plugins.gradle.org/m2/" }
++    xmvn()
++    maven { url 'https://repo.gradle.org/gradle/libs' }
++    mavenCentral()
+ }
+ 
+ dependencies {
+diff --git a/subprojects/docs/docs.gradle b/subprojects/docs/docs.gradle
+index e876b265d16..5063c30e60e 100755
+--- a/subprojects/docs/docs.gradle
++++ b/subprojects/docs/docs.gradle
+@@ -41,6 +41,7 @@ apply plugin: 'javascript-base'
+ apply plugin: 'org.asciidoctor.convert'
+ 
+ repositories {
++    xmvn()
+     javaScript.googleApis()
+ 
+     ivy {
+diff --git a/subprojects/docs/src/transforms/release-notes.gradle b/subprojects/docs/src/transforms/release-notes.gradle
+index c0c76884944..5aca84da33d 100644
+--- a/subprojects/docs/src/transforms/release-notes.gradle
++++ b/subprojects/docs/src/transforms/release-notes.gradle
+@@ -1,5 +1,6 @@
+ buildscript {
+     repositories {
++        xmvn()
+         mavenCentral()
+     }
+     dependencies {
+diff --git a/subprojects/reporting/reporting.gradle b/subprojects/reporting/reporting.gradle
+index a467c71be4d..92981631cb8 100644
+--- a/subprojects/reporting/reporting.gradle
++++ b/subprojects/reporting/reporting.gradle
+@@ -7,6 +7,7 @@ configurations {
+ }
+ 
+ repositories {
++    xmvn()
+     javaScript.googleApis()
+ }
+ 
+-- 
+2.20.1
+
