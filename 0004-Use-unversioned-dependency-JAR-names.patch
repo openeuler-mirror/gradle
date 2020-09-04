@@ -1,7 +1,7 @@
-From d89a4c6756ee0a02b3f71df07baebec95e4cef06 Mon Sep 17 00:00:00 2001
+From df35f5573411746ea2a3d01bfa3f2bcbb01648c3 Mon Sep 17 00:00:00 2001
 From: Michael Simacek <msimacek@redhat.com>
 Date: Sat, 7 Feb 2015 15:28:03 +0100
-Subject: [PATCH 04/18] Use unversioned dependency JAR names
+Subject: [PATCH 04/17] Use unversioned dependency JAR names
 
 ---
  .../gradle/api/internal/classpath/DefaultModuleRegistry.java    | 2 +-
@@ -35,5 +35,5 @@ index 5b7329999ae..c4c778e65a6 100644
      private final File file;
      private final Matcher matcher;
 -- 
-2.20.1
+2.17.2
 

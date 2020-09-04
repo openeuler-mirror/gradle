@@ -1,7 +1,7 @@
-From 7cab99198af39b1c062fdb6dbbb1776946692b78 Mon Sep 17 00:00:00 2001
+From 3f55c106c3ba0c138c1eaa7bb2054e4aa549302e Mon Sep 17 00:00:00 2001
 From: Michael Simacek <msimacek@redhat.com>
 Date: Mon, 26 Mar 2018 14:07:20 +0200
-Subject: [PATCH 17/18] Set core-api source level to 8
+Subject: [PATCH 17/17] Set core-api source level to 8
 
 ---
  subprojects/core-api/core-api.gradle | 2 +-
@@ -22,7 +22,7 @@ index c90a0b48eec..587729f5da2 100644
  dependencies {
      api project(":baseServices")
 diff --git a/subprojects/core/core.gradle b/subprojects/core/core.gradle
-index b6d6eba552c..bf44aed2ed3 100755
+index 9ca47b639c5..691ec477805 100755
 --- a/subprojects/core/core.gradle
 +++ b/subprojects/core/core.gradle
 @@ -16,7 +16,7 @@
@@ -35,5 +35,5 @@ index b6d6eba552c..bf44aed2ed3 100755
  configurations {
      reports
 -- 
-2.20.1
+2.17.2
 

@@ -1,7 +1,7 @@
-From b92f935f615f9a92b4e636a1635031f7a2c74068 Mon Sep 17 00:00:00 2001
+From 67e10af4d925d4cef15be9aa48781d439c29f171 Mon Sep 17 00:00:00 2001
 From: Mikolaj Izdebski <mizdebsk@redhat.com>
 Date: Fri, 12 Jun 2015 12:04:53 +0200
-Subject: [PATCH 07/18] Port to Kryo 3.0
+Subject: [PATCH 07/17] Port to Kryo 3.0
 
 ---
  .../org/gradle/internal/serialize/kryo/KryoBackedEncoder.java   | 2 +-
@@ -21,5 +21,5 @@ index c63e4340069..9f93df4ab8a 100644
  
      public void flush() {
 -- 
-2.20.1
+2.17.2
 

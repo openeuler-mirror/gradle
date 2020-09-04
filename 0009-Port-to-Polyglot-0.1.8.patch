@@ -1,7 +1,7 @@
-From def0eddc86eed16fe98250e571844981c0a2d690 Mon Sep 17 00:00:00 2001
+From e0fd3d1d53e2a477ae55534bbc9180a40537bf65 Mon Sep 17 00:00:00 2001
 From: Mikolaj Izdebski <mizdebsk@redhat.com>
 Date: Tue, 21 Apr 2015 15:12:44 +0200
-Subject: [PATCH 09/18] Port to Polyglot 0.1.8
+Subject: [PATCH 09/17] Port to Polyglot 0.1.8
 
 ---
  .../maven/internal/pom/CustomModelBuilder.java  | 17 ++++++++++-------
@@ -52,5 +52,5 @@ index e311d4993b6..91d5fa22d95 100644
          factories.remove("project");
          ModelFactory modelFactory = new ModelFactory(model);
 -- 
-2.20.1
+2.17.2
 

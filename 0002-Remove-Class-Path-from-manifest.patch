@@ -1,7 +1,7 @@
-From 2378f2f2412a8f6684dd5a360102bce9a43881fe Mon Sep 17 00:00:00 2001
+From b2a5d7f3bd79639fbd391f3b2ce74a6f1e6023de Mon Sep 17 00:00:00 2001
 From: Mikolaj Izdebski <mizdebsk@redhat.com>
 Date: Sun, 9 Nov 2014 17:52:30 +0100
-Subject: [PATCH 02/18] Remove Class-Path from manifest
+Subject: [PATCH 02/17] Remove Class-Path from manifest
 
 ---
  .../installation/CurrentGradleInstallationLocator.java    | 8 +-------
@@ -81,5 +81,5 @@ index 830aaf34cfe..2c57544bb51 100755
          if (classpath.isEmpty()) {
              throw new IllegalStateException("Unable to construct a bootstrap classpath when starting the daemon");
 -- 
-2.20.1
+2.17.2
 
