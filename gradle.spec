@@ -239,4 +239,7 @@ install -p -m 644 man/gradle.1 %{buildroot}%{_mandir}/man1/gradle.1
 
 %changelog
 * Fri Sep 4 2020 chengzihan <chengzihan2@huawei.com> - 4.4.1-1
+- upgrade to 4.4.1-1
+
+* Fri Dec 13 2019 daiqianwen <daiqianwen@huawei.com> - 4.3.1-10
 - Package init
