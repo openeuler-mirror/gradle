@@ -13,16 +13,15 @@ Source3:             gradle-jquery-metadata.xml
 Source4:             gradle-launcher.sh
 Source5:             gradle.desktop
 Source6:             gradle-man.txt
-Source9900:          gradle-bootstrap.sh
-Source9901:          gradle-bootstrap-generate-resources.py
-Source9910:          gradle-bootstrap-module-list
-Source9911:          gradle-bootstrap-module-dependencies
-Source9920:          gradle-bootstrap-api-mapping.txt
-Source9921:          gradle-bootstrap-default-imports.txt
-Source9922:          gradle-bootstrap-plugin.properties
-Source9923:          gradle-bootstrap-implementation-plugin.properties
-Source9924:          gradle-bootstrap-api-relocated.txt
-Source9925:          gradle-bootstrap-test-kit-relocated.txt
+Source7:             gradle-bootstrap.sh
+Source8:             gradle-bootstrap-module-list
+Source9:             gradle-bootstrap-module-dependencies
+Source10:            gradle-bootstrap-api-mapping.txt
+Source11:            gradle-bootstrap-default-imports.txt
+Source12:            gradle-bootstrap-plugin.properties
+Source13:            gradle-bootstrap-implementation-plugin.properties
+Source14:            gradle-bootstrap-api-relocated.txt
+Source15:            gradle-bootstrap-test-kit-relocated.txt
 Patch0001:           0001-Gradle-local-mode.patch
 Patch0002:           0002-Remove-Class-Path-from-manifest.patch
 Patch0003:           0003-Implement-XMvn-repository-factory-method.patch
@@ -180,13 +179,13 @@ export LANG=en_US.UTF8
 %if %{with bootstrap}
 mkdir -p subprojects/docs/src/main/resources
 mkdir -p subprojects/core/src/main/resources/org/gradle/api/internal/runtimeshaded
-cp %{SOURCE9920} subprojects/docs/src/main/resources/api-mapping.txt
-cp %{SOURCE9921} subprojects/docs/src/main/resources/default-imports.txt
-cp %{SOURCE9922} subprojects/core/src/main/resources/gradle-plugins.properties
-cp %{SOURCE9923} subprojects/core/src/main/resources/gradle-implementation-plugins.properties
-cp %{SOURCE9924} subprojects/core/src/main/resources/org/gradle/api/internal/runtimeshaded/api-relocated.txt
-cp %{SOURCE9925} subprojects/core/src/main/resources/org/gradle/api/internal/runtimeshaded/test-kit-relocated.txt
-%{SOURCE9900} %{SOURCE9910} %{SOURCE9911}
+cp %{SOURCE10} subprojects/docs/src/main/resources/api-mapping.txt
+cp %{SOURCE11} subprojects/docs/src/main/resources/default-imports.txt
+cp %{SOURCE12} subprojects/core/src/main/resources/gradle-plugins.properties
+cp %{SOURCE13} subprojects/core/src/main/resources/gradle-implementation-plugins.properties
+cp %{SOURCE14} subprojects/core/src/main/resources/org/gradle/api/internal/runtimeshaded/api-relocated.txt
+cp %{SOURCE15} subprojects/core/src/main/resources/org/gradle/api/internal/runtimeshaded/test-kit-relocated.txt
+%{SOURCE7} %{SOURCE8} %{SOURCE9}
 %else
 rm gradle.properties
 gradle-local --offline --no-daemon install xmvnInstall \
