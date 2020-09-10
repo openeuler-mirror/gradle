@@ -6,7 +6,7 @@ Summary:             Build automation tool
 License:             ASL 2.0
 URL:                 http://www.gradle.org/
 BuildArch:           noarch
-Source0:             http://services.gradle.org/distributions/gradle-%{version}-src.zip
+Source0:             https://github.com/gradle/gradle/archive/v%{version}.zip
 Source1:             http://services.gradle.org/versions/all#/all-released-versions.json
 Source2:             gradle-font-metadata.xml
 Source3:             gradle-jquery-metadata.xml
