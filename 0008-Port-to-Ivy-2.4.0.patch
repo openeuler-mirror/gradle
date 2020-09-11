@@ -1,7 +1,7 @@
-From cd00959b02331baac5fecda252599eb993bbf8f5 Mon Sep 17 00:00:00 2001
+From 9273768537f428d78e178b328d61c85746ea800e Mon Sep 17 00:00:00 2001
 From: Mikolaj Izdebski <mizdebsk@redhat.com>
 Date: Mon, 13 Apr 2015 12:27:00 +0200
-Subject: [PATCH 08/18] Port to Ivy 2.4.0
+Subject: [PATCH 08/17] Port to Ivy 2.4.0
 
 ---
  .../ivyresolve/parser/IvyXmlModuleDescriptorParser.java         | 2 +-
@@ -21,5 +21,5 @@ index 9a86d9cb183..c29f1952eb7 100644
                  state = State.INFO;
              } else if (state == State.DESCRIPTION) {
 -- 
-2.20.1
+2.17.2
 
