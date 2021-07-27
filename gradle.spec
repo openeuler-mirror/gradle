@@ -1,7 +1,7 @@
 %bcond_with bootstrap
 Name:                gradle
 Version:             4.4.1
-Release:             1
+Release:             2
 Summary:             Build automation tool
 License:             ASL 2.0
 URL:                 http://www.gradle.org/
@@ -40,6 +40,7 @@ Patch0015:           0015-Disable-docs-build.patch
 Patch0016:           0016-Port-to-guava-20.0.patch
 Patch0017:           0017-Set-core-api-source-level-to-8.patch
 Patch0018:           0018-Use-HTTPS-for-GoogleAPIs-repository.patch
+Patch0019:           CVE-2019-16370.patch
 BuildRequires:       git
 %if %{with bootstrap}
 BuildRequires:       groovy >= 2.3 javapackages-local
@@ -237,6 +238,9 @@ install -p -m 644 man/gradle.1 %{buildroot}%{_mandir}/man1/gradle.1
 %license LICENSE NOTICE
 
 %changelog
+* Tue Jul 27 2021 liwu <liwu13@huawei.com> - 4.4.1-2
+- fix CVE-2019-16370
+
 * Fri Sep 4 2020 chengzihan <chengzihan2@huawei.com> - 4.4.1-1
 - upgrade to 4.4.1-1
 
