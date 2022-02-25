@@ -1,7 +1,7 @@
 %bcond_with bootstrap
 Name:                gradle
 Version:             4.4.1
-Release:             2
+Release:             3
 Summary:             Build automation tool
 License:             ASL 2.0
 URL:                 http://www.gradle.org/
@@ -238,6 +238,9 @@ install -p -m 644 man/gradle.1 %{buildroot}%{_mandir}/man1/gradle.1
 %license LICENSE NOTICE
 
 %changelog
+* Fri Feb 25 2022 wangkai <wangkai385@huawei.com> - 4.4.1-3
+- Rebuild for fix log4j1.x cves
+
 * Tue Jul 27 2021 liwu <liwu13@huawei.com> - 4.4.1-2
 - fix CVE-2019-16370
 
